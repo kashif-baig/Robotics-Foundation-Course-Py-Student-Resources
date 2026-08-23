@@ -1,7 +1,5 @@
-# Install a version of Python no later than 3.14, and dot net version no earlier than 8.0.
-# Ensure pythonnet is installed by issuing the following on a command line of the
-# selected Python environment:
-# pip install pythonnet
+# Requires a version of Python no later than 3.14, and dot net version no earlier than 8.0.
+# Ensure pythonnet has been installed in the Python virtual environment.
 
 import threading
 import time,math
