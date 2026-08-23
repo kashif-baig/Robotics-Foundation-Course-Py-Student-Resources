@@ -1,6 +1,9 @@
 # Sonar ranging application that uses sonar to measure distance (max 250 cm) of object
 # from sensor. Sound is emmited from the buzzer with an interval that corresponds to
 # the distance.
+#
+# Make sure to correctly set the variable serial_port in the app_config.py file
+# before running the program.
 
 from app_config import *
 

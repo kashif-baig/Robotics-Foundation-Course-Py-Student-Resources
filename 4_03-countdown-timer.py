@@ -1,5 +1,8 @@
 # A countdown timer that uses the slider to set the timer duration,
 # and button to start/stop and reset the countdown (long press).
+#
+# Make sure to correctly set the variable serial_port in the app_config.py file
+# before running the program.
 
 from app_config import *
 

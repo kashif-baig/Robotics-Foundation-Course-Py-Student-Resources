@@ -1,6 +1,9 @@
 # Basic example that blinks LED with interval controlled by the
 # potentiometer slider. A push button is used for turning the
 # blinking on or off.
+#
+# Make sure to correctly set the variable serial_port in the app_config.py file
+# before running the program.
 
 from app_config import *
 

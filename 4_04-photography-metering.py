@@ -2,6 +2,9 @@
 # Use the slider to select the shutter speed, and press the button to cycle
 # through ISO values. Position the all in one kit where the photography
 # subject is locationed, and allow the ambient light to fall on the light sensor.
+#
+# Make sure to correctly set the variable serial_port in the app_config.py file
+# before running the program.
 
 from app_config import *
 

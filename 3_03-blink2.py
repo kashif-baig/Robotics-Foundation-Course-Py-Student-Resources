@@ -1,5 +1,7 @@
 # Basic example that blinks LED with interval controlled by the
 # potentiometer slider and helper function.
+# Make sure to correctly set the variable serial_port in the app_config.py file
+# before running the program.
 
 from app_config import *
 

@@ -1,4 +1,7 @@
 # Basic example that blinks LED with fixed interval of 1 second.
+#
+# Make sure to correctly set the variable serial_port in the app_config.py file
+# before running the program.
 
 from app_config import *
 
