@@ -1,0 +1,64 @@
+# A countdown timer that uses the slider to set the timer duration,
+# and button to start/stop and reset the countdown (long press).
+
+from app_config import *
+
+def convert_to_duration(value):
+    '''Convert raw analog value to duration as seconds, in tens of seconds.'''
+    return int((360 * value) / 1023) * 10
+
+def to_time_format(seconds):
+    '''Convert seconds to MM:SS format for display.'''
+    return f"{seconds // 60:02}:{str(seconds % 60).zfill(2)}"
+
+try:
+    all_in_one_kit.Connect()
+    print("Press Esc to stop program.")
+
+    # Register function to convert slider to alarm duration.
+    all_in_one_kit.Analog.UseConverter(AnalogConverter(convert_to_duration), slider)
+    
+    countdown_running = False
+    timer_reset = True
+    alarm_sound_active = False
+    timer_value_seconds = slider.Value
+    target_time = datetime.now() + timedelta(seconds=timer_value_seconds)
+    
+    while not escape_pressed():
+        input_event = all_in_one_kit.Digital.GetInputEvent()
+
+        if alarm_sound_active and input_event == Input.BUTTON_1_RELEASED:
+            # Turn off alarm if sounding.
+            alarm_sound_active = False
+            beeper.Off()
+        elif not countdown_running:
+            if input_event == Input.BUTTON_1_RELEASED:
+                # Start the countdown if not running.
+                target_time = datetime.now() + timedelta(seconds=timer_value_seconds)
+                countdown_running = timer_value_seconds > 0
+                timer_reset = False
+            elif input_event == Input.BUTTON_1_SUSTAINED or timer_reset:
+                # Reset countdown timer.
+                timer_value_seconds = int(slider.Value)
+                display.PrintAt(0, 0, to_time_format(timer_value_seconds))
+                target_time = datetime.now() + timedelta(seconds=timer_value_seconds)
+                timer_reset = True
+        else:
+            if input_event == Input.BUTTON_1_RELEASED:
+                # Stop countdown if running.
+                countdown_running = False
+            else:
+                # Update display with changing countdown.
+                timer_value_seconds = int((target_time - datetime.now()).total_seconds())
+                display.PrintAt(0, 0, to_time_format(timer_value_seconds))
+
+                if timer_value_seconds <= 0:
+                    # Countdown has completed, sound the alarm.
+                    countdown_running = False
+                    alarm_sound_active = True
+                    beeper.RunPattern(50, 50, 4, 3, 500)
+
+        time.sleep(0.05)
+finally:
+    all_in_one_kit.Close()
+

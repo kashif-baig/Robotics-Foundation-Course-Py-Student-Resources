@@ -1,0 +1,7 @@
+0|Welcome to Monday
+1|Tuesday is project day
+2|Remember to complete Exercise 11
+3|Thursday coding challenge
+4|Happy Friday
+5|Enjoy your weekend
+6|Prepare for the week ahead
