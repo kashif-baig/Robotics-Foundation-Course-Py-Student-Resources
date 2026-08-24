@@ -1,3 +1,5 @@
+# https://www.cohesivecomputing.co.uk/robotics/
+#
 # Requires a version of Python no later than 3.14, and dot net version no earlier than 8.0.
 # Ensure pythonnet has been installed in the Python virtual environment.
 
@@ -38,6 +40,9 @@ pulse_counter = all_in_one_kit.PulseCounter
 sonar = all_in_one_kit.Sonar
 sound_sensor = all_in_one_kit.Analog.A1
 '''Value corresponse to sound loudness (0 to 1023). 0 indicates silence, 1023 maximum loudness.'''
+mpu_sensor = all_in_one_kit.MPUSensor
+'''A motion processing unit that reports accelerometer and gyro values.'''
+
 
 # Assign actuator to variable
 buzzer = all_in_one_kit.Trigger
@@ -56,8 +61,7 @@ servo = all_in_one_kit.Servo1
 '''A 180 degree servo motor.'''
 fan = all_in_one_kit.Motor2
 '''A DC motor that drives a fan.'''
-mpu_sensor = all_in_one_kit.MPUSensor
-'''A motion processing unit that reports accelerometer and gyro values.'''
+
 
 def button_pressed()->bool:
     '''Returns True if the button was pressed, false otherwise.'''
@@ -74,6 +78,7 @@ def get_ir_code()->int:
     '''Gets the IR command button code if pressed, -1 otherwise.'''
     ir_cmd = all_in_one_kit.Digital.GetIRCommand()
     return ir_cmd.Code if ir_cmd.ButtonPressed else -1
+
 
 _filtered_temp =0.0
 

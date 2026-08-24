@@ -1,3 +1,5 @@
+# https://www.cohesivecomputing.co.uk/robotics/
+#
 # Application for calculating the aperture F-stop of a camera.
 # Use the slider to select the shutter speed, and press the button to cycle
 # through ISO values. Position the all in one kit where the photography

@@ -103,8 +103,8 @@ For students who have and want to use their own Elecrow All-in-One Starter Kit f
 
 You must first deploy the firmware:
 
-* Install [Arduino IDE](https://www.arduino.cc/en/software) on your computer;
-* Download and unzip [RoboTx_Firmware](https://github.com/kashif-baig/RoboTx_Firmware);
+* Install [**Arduino IDE**](https://www.arduino.cc/en/software) on your computer;
+* Download and unzip [**RoboTx_Firmware**](https://github.com/kashif-baig/RoboTx_Firmware);
 * Locate the .ino file in the unzipped folder and open it using the Arduino IDE;
 * Make sure the All-in-One kit is connected to the computer's USB port;
 * In the Arduino IDE, select the *Arduino Uno* as the board, making sure that it shows as connected to the correct USB port;
@@ -114,7 +114,7 @@ This firmware enables communication between the user's computer and the Arduino.
 
 ---
 
-### 2. Install .NET Runtime
+### 2. Install .NET Runtime or SDK
 
 * Install [**.NET 8.0 or later**](https://dotnet.microsoft.com/en-us/download) on to your computer.
 
@@ -124,7 +124,7 @@ This is required for running your Python programs with the API that communicates
 
 ### 3. Install Powershell
 
-* Install [Powershell](https://learn.microsoft.com/en-us/powershell/scripting/install/install-powershell-on-windows?view=powershell-7.6) if not already installed on your computer.
+* Install [**Powershell**](https://learn.microsoft.com/en-us/powershell/scripting/install/install-powershell-on-windows?view=powershell-7.6) if not already installed on your computer.
 
 This is needed for running scripts to configure your Python environment.
 
@@ -144,8 +144,8 @@ Please note the version number of your Python installation.
 
 It is strongly recommended to install and use VS Code for Python development:
 
-* Install [Visual Studio Code](https://code.visualstudio.com/download);
-* Install [Python](https://marketplace.visualstudio.com/items?itemName=ms-python.python) and [Pylance](https://marketplace.visualstudio.com/items?itemName=ms-python.vscode-pylance) extensions.
+* Install [**Visual Studio Code**](https://code.visualstudio.com/download);
+* Install [**Python**](https://marketplace.visualstudio.com/items?itemName=ms-python.python) and [**Pylance**](https://marketplace.visualstudio.com/items?itemName=ms-python.vscode-pylance) extensions.
 
 #### Why Visual Studio Code?
 
@@ -163,8 +163,8 @@ Visual Studio Code is ideal because:
 After the computing environment and Elecrow All-in-One Starter kit have been configured, download this repo and create a Python virtual environment for it using the steps below.
 
 * Download the ZIP for this repo and extract to a folder on your computer;
-* In the extracted folder, locate the Powershell script *create-venv.ps1* and open using Visual Studio Code. This is needed to create a Python virtual environment and install the package [Pythonnet]((https://pypi.org/project/pythonnet/));
-* Run this script by clicking the Run icon, usually at the top right of the VS Code window. If it fails, try running it again.
+* In the extracted folder, locate the Powershell script *create-venv.ps1* and open using Visual Studio Code. This script will create a Python virtual environment and install the package [Pythonnet]((https://pypi.org/project/pythonnet/));
+* Run the script of the previous step by clicking the Run icon, usually at the top right of the VS Code window. If it fails, delete .venv folder (if created), and try running the script again.
 
 Once all the steps have been successfully completed, the computing environment will be ready for developing and running Python programs against the Elecrow All-in-One Starter kit.
 
