@@ -14,10 +14,6 @@ Rather than concentrating solely on programming examples in isolation, the cours
 
 The course is based on the **Elecrow All-in-One Starter Kit for Arduino**, together with the Robo-Tx firmware and API used to communicate with the hardware from Python.
 
-Students **do not need to own the Elecrow All-in-One Starter Kit** to participate in the course. During supervised sessions, students can access the hardware remotely and run their programs against the remotely accessible kit.
-
-Students who own the hardware can alternatively set up their own PC and All-in-One Starter Kit to run the exercises locally.
-
 ## What's in this Repository?
 
 The repository contains several types of files.
@@ -65,12 +61,6 @@ The course uses the **Elecrow All-in-One Starter Kit for Arduino** as its roboti
 
 The kit provides a collection of sensors, actuators, controls and display that can be accessed from Python through the Robo-Tx API. This allows programming concepts to be demonstrated using tangible, interactive applications rather than purely console-based programs.
 
-### You Don't Need the Hardware
-
-Students participating in the course do **not** need to purchase the All-in-One Starter Kit.
-
-The course is designed to support remote access to the hardware during supervised course sessions. This means that students can develop and test their Python programs without having the physical electronics connected to their own computer.
-
 ### Using Your Own Kit?
 
 Students who already have an Elecrow All-in-One Starter Kit can configure their own computer and hardware to run the examples locally. [**Instructions**](#computer-and-hardware-configuration) for doing can be found towards the end of this README.
@@ -87,11 +77,9 @@ Depending on the exercise, the student may be asked to:
 * add a new feature;
 * change the way a sensor or actuator is used;
 * find and fix a programming error; or
-* combine several programming techniques in a larger application.
+* add or improve documentation of a complete program.
 
 Students are encouraged to experiment with the programs rather than simply copying solutions. Changing values, testing different conditions and observing the effect on the hardware are important parts of learning to program.
-
-Students should regularly attend an online supervised practical session to receive support if needed, demonstrate their work, discuss their approach and be briefed for the next assignment.
 
 ---
 
@@ -164,7 +152,7 @@ After the computing environment and Elecrow All-in-One Starter kit have been con
 
 * Download the ZIP for this repo and extract to a folder on your computer;
 * In the extracted folder, locate the Powershell script *create-venv.ps1* and open using Visual Studio Code. This script will create a Python virtual environment and install the package [Pythonnet]((https://pypi.org/project/pythonnet/));
-* Run the script of the previous step by clicking the Run icon, usually at the top right of the VS Code window. If it fails, delete .venv folder (if created), and try running the script again.
+* Run the script of the previous step by clicking the Run icon, usually at the top right of the VS Code window. If it fails, delete .venv folder (if created), and try running the script again. Alternatively, create a virtual environment manually and manually install Pythonnet.
 
 Once all the steps have been successfully completed, the computing environment will be ready for developing and running Python programs against the Elecrow All-in-One Starter kit.
 
