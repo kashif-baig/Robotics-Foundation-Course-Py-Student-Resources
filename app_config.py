@@ -40,6 +40,8 @@ pulse_counter = all_in_one_kit.PulseCounter
 sonar = all_in_one_kit.Sonar
 sound_sensor = all_in_one_kit.Analog.A1
 '''Value corresponse to sound loudness (0 to 1023). 0 indicates silence, 1023 maximum loudness.'''
+dht_sensor = all_in_one_kit.DHTSensor
+'''Reports temperature and humidity values.'''
 mpu_sensor = all_in_one_kit.MPUSensor
 '''A motion processing unit that reports accelerometer and gyro values.'''
 
@@ -80,14 +82,14 @@ def get_ir_code()->int:
     return ir_cmd.Code if ir_cmd.ButtonPressed else -1
 
 
-_filtered_temp =0.0
+# _filtered_temp =0.0
 
-def get_temperature()->float:
-    '''Returns the temperature from an analog sensor with filtering applied.'''
-    global _filtered_temp
-    temp_value = (temp_sensor.Value * 500)/1023
-    _filtered_temp = _filtered_temp * 0.8 + temp_value * 0.2
-    return _filtered_temp
+# def get_temperature()->float:
+#     '''Returns the temperature from an analog sensor with filtering applied.'''
+#     global _filtered_temp
+#     temp_value = (temp_sensor.Value * 500)/1023
+#     _filtered_temp = _filtered_temp * 0.8 + temp_value * 0.2
+#     return _filtered_temp
 
 # Define the reference colours and their HSL ranges.
 # Each entry is a tuple:
