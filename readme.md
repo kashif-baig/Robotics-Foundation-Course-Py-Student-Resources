@@ -8,11 +8,11 @@ The course combines Python programming with practical core robotics activities, 
 
 ## About the Course
 
-The course is designed to provide a practical foundation in Python programming through a series of progressively more challenging exercises and projects.
-
+The course is designed to provide a practical foundation in Python programming through a series of progressively more challenging exercises and projects. 
 Rather than concentrating solely on programming examples in isolation, the course uses robotics hardware (sensors and actuators) to give Python programs a real-world purpose. Students learn to develop, test and improve programs that interact with physical devices.
 
-The course is based on the **Elecrow All-in-One Starter Kit for Arduino**, together with the Robo-Tx firmware and API used to communicate with the hardware from Python.
+Much of the course is based on the **Elecrow All-in-One Starter Kit for Arduino** and Robo-Tx. The latter is a robotics-oriented learning platform that consists of an API installed on a computer, and firmware deployed to Arduino compatible hardware.
+
 
 ## What's in this Repository?
 
@@ -26,7 +26,7 @@ For most coding exercises, students should make a copy of the template rather th
 
 ### Basic Python Examples
 
-The repository contains small Python programs demonstrating individual programming concepts and features of the Robo-Tx API.
+The repository contains small Python programs demonstrating individual programming concepts and API of the Robo-Tx learning platform.
 
 These examples are intended to help students:
 
@@ -85,11 +85,11 @@ Students are encouraged to experiment with the programs rather than simply copyi
 
 ## Computer and Hardware Configuration
 
-For students who have and want to use their own Elecrow All-in-One Starter Kit for Arduino, follow the instructions here to configure it and your computing environment. It is only necessary to install software if not already installed.
+For students who have and want to use their own Elecrow All-in-One Starter Kit for Arduino, follow the instructions here to configure it and your computing environment.
 
 ### 1. Install Robo-Tx Firmware on the All-in-One Starter Kit for Arduino
 
-You must first deploy the firmware:
+The process for uploading the firmware to an All-in-One Starter Kit for Arduino is the same for uploading the firmware to any Arduino Uno board.
 
 * Install [**Arduino IDE**](https://www.arduino.cc/en/software) on your computer;
 * Download and unzip [**RoboTx_Firmware**](https://github.com/kashif-baig/RoboTx_Firmware);
@@ -166,6 +166,6 @@ To run a particular Python example from the repo:
 
 ## Licence and Educational Use
 
-The contents of this repository are provided for use in conjunction with the Python Programming: Robotics Foundation Course.
+The contents of this repository are provided for use in conjunction with the Python Programming: Robotics Foundation Course. The source code and Robo-Tx API files are free for personal use.
 
 Students are encouraged to experiment with, modify and extend the example programs as part of their learning.
